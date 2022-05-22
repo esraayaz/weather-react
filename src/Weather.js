@@ -5,15 +5,14 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
-      iconUrl: response.data.weather[0].icon,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
       Feels: response.data.main.feels_like,
@@ -21,7 +20,6 @@ export default function Weather(props) {
       Max: response.data.main.temp_max,
       humidity: response.data.main.humidity,
     });
-    setReady(true);
   }
 
   function search() {
