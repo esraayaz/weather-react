@@ -15,9 +15,9 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
-      Feels: response.data.main.feels_like,
-      Min: response.data.main.temp_min,
-      Max: response.data.main.temp_max,
+      feels_like: response.data.main.feels_like,
+      temp_min: response.data.main.temp_min,
+      temp_max: response.data.main.temp_max,
       humidity: response.data.main.humidity,
     });
   }
@@ -27,6 +27,7 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -46,16 +47,16 @@ export default function Weather(props) {
                 placeholder="Enter a city.."
                 className="form-control"
                 onChange={handleCityChange}
-              />
-            </div>
+              />{" "}
+            </div>{" "}
             <div className="col-3">
               <button type="submit" value="search" className="btn btn-dark">
-                Search
-              </button>
-            </div>
-          </div>
-        </form>
-        <WeatherInfo data={weatherData} />
+                Search{" "}
+              </button>{" "}
+            </div>{" "}
+          </div>{" "}
+        </form>{" "}
+        <WeatherInfo data={weatherData} />{" "}
       </div>
     );
   } else {

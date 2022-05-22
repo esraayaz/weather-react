@@ -15,19 +15,25 @@ export default function WeatherInfo(props) {
       </ul>
       <div className="row mt-3">
         <div className="col-6">
-          <div className="clearfix">
+          <div className="d-flex">
             <WeatherIcon code={props.data.icon} />
-          </div>
-          <div>
             <WeatherTemperature celsius={props.data.temperature} />
           </div>
         </div>
         <div className="col-6">
           <ul className="toup">
-            <li>Feels: {Math.round(props.data.feels_like)} °C</li>
-            <li>Min : {Math.round(props.data.temp_min)} °C</li>
-            <li>Max : {Math.round(props.data.temp_max)} °C</li>
-            <li>Humidity : {props.data.humidity} %</li>
+            <li>
+              <strong>Feels :</strong> {Math.round(props.data.feels_like)} °C
+            </li>
+            <li>
+              <strong>Minimum :</strong> {Math.round(props.data.temp_min)} °C
+            </li>
+            <li>
+              <strong>Maximum :</strong> {Math.round(props.data.temp_max)} °C
+            </li>
+            <li>
+              <strong>Humidity :</strong> {props.data.humidity} %
+            </li>
           </ul>
         </div>
       </div>
