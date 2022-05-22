@@ -1,9 +1,12 @@
 .App {
+    box-sizing: border-box;
     margin: 0 auto;
-    width: 675px;
+    padding-top: 110px;
+    width: 600px;
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .App footer {
     font-size: 12px;
+    margin-left: 5px;
 }
