@@ -52,14 +52,14 @@ export default function Weather(props) {
               />{" "}
             </div>{" "}
             <div className="col-3">
-              <button type="submit" value="search" className="btn btn-dark">
+              <button type="submit" value="search" className="btn btn-light">
                 Search{" "}
               </button>{" "}
             </div>{" "}
           </div>{" "}
         </form>{" "}
         <WeatherInfo data={weatherData} />{" "}
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherForecast coordinates={weatherData.coordinates} />{" "}
       </div>
     );
   } else {
