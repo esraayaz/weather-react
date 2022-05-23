@@ -7,6 +7,22 @@
 }
 
 .App footer {
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 5px;
+}
+
+.App .esra {
+    text-decoration: none;
+}
+
+.App .esra:hover {
+    text-decoration: underline;
+}
+
+.App .ayaz {
+    text-decoration: none;
+}
+
+.App .ayaz:hover {
+    text-decoration: underline;
 }

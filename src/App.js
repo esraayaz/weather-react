@@ -11,19 +11,21 @@ export default function App() {
         <a
           href="https://www.linkedin.com/in/esraayaz/"
           target="_blank"
+          className="esra"
           rel="noreferrer"
         >
-          Esra Ayaz
+          Esra Ayaz{" "}
         </a>{" "}
         and is{" "}
         <a
           href="https://github.com/esraayaz/weather-react"
           target="_blank"
+          className="ayaz"
           rel="noreferrer"
         >
-          open-sourced on GitHub
-        </a>
-      </footer>
+          open - sourced on GitHub{" "}
+        </a>{" "}
+      </footer>{" "}
     </div>
   );
 }
